@@ -1,0 +1,102 @@
+/* Cabecera Oscura Premium */
+.main-header {
+  background-color: #010a13; /* El negro azulado más oscuro de Riot */
+  border-bottom: 1px solid #32281f; /* Línea divisoria bronce/oro */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logotipo */
+.logo a {
+  font-size: 22px;
+  font-weight: 800;
+  color: #f0f2f5;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.logo a .gold-text {
+  color: #c8aa6e; /* Dorado oficial */
+  text-shadow: 0 0 8px rgba(200, 170, 110, 0.4);
+}
+
+/* Menú de Navegación */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #a0aab5;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animación de línea dorada inferior al pasar el cursor */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #c8aa6e;
+  transition: width 0.3s ease, left 0.3s ease;
+  box-shadow: 0 0 8px #c8aa6e;
+}
+
+.nav-link:hover::after, 
+.nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #ffffff;
+}
+
+/* Botón Dorado Metálico */
+.btn-hextech {
+  background: linear-gradient(to bottom, #e1b34a, #9a7326);
+  border: 1px solid #f0e6d2;
+  color: #010a13;
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: filter 0.2s, transform 0.1s;
+}
+
+.btn-hextech:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 12px rgba(200, 170, 110, 0.4);
+}
+
+.btn-hextech:active {
+  transform: scale(0.98);
+}

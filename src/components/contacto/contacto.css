@@ -1,0 +1,222 @@
+/* Contenedor de la Sección */
+.contact-section {
+  background-color: #0b1016; /* Mismo fondo ultra oscuro que el Home */
+  color: #f0f2f5;
+  padding: 60px 20px;
+  min-height: calc(100vh - 140px); /* Evita desencajes con header/footer */
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Encabezado */
+.contact-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+.contact-title {
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.contact-title span {
+  color: #c8aa6e; /* Dorado oficial */
+  text-shadow: 0 0 10px rgba(200, 170, 110, 0.3);
+}
+
+.contact-subtitle {
+  color: #a0aab5;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Distribución en Grid (Responsivo) */
+.contact-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* --- COLUMNA IZQUIERDA: INFO --- */
+.info-column {
+  background-color: #12171d;
+  border: 1px solid #1e2832;
+  padding: 35px;
+  border-radius: 4px;
+}
+
+.info-box h3 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #785a28; /* Línea dorada sutil */
+  padding-bottom: 10px;
+}
+
+.info-box p {
+  color: #929ba4;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info-list li {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.info-list .icon {
+  font-size: 22px;
+  background-color: #1a222d;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid #32281f;
+}
+
+.info-list strong {
+  display: block;
+  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.info-list a {
+  color: #c8aa6e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.info-list a:hover {
+  color: #ffffff;
+}
+
+.info-list p {
+  margin: 0;
+  font-size: 13px;
+  color: #61686f;
+}
+
+/* --- COLUMNA DERECHA: FORMULARIO --- */
+.form-column {
+  background-color: #12171d;
+  border: 1px solid #785a28; /* Resaltado en oro oscuro */
+  padding: 35px;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hextech-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #c8aa6e;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Campos de entrada (Inputs, Select, Textarea) */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background-color: #1e2328; /* Gris oscuro del buscador */
+  border: 1px solid #463714;
+  color: #f0f2f5;
+  padding: 12px 16px;
+  font-size: 15px;
+  border-radius: 4px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #61686f;
+}
+
+/* Efecto Focus 'Hextech' con brillo dorado */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c8aa6e;
+  box-shadow: 0 0 8px rgba(200, 170, 110, 0.25);
+}
+
+/* Estilo para las opciones del menú desplegable */
+.form-group select option {
+  background-color: #1e2328;
+  color: #f0f2f5;
+}
+
+.form-group textarea {
+  resize: vertical; /* Permite estirar hacia abajo pero no romper los lados */
+}
+
+/* Botón de Envío Metálico */
+.btn-submit-hextech {
+  background: linear-gradient(to bottom, #e1b34a, #9a7326);
+  border: 1px solid #f0e6d2;
+  color: #010a13;
+  padding: 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: filter 0.2s, transform 0.1s;
+}
+
+.btn-submit-hextech:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 15px rgba(200, 170, 110, 0.4);
+}
+
+.btn-submit-hextech:active {
+  transform: scale(0.99);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 850px) {
+  .contact-grid {
+    grid-template-columns: 1fr; /* Pasa a una sola columna en móviles/tablets */
+    gap: 30px;
+  }
+  
+  .contact-section {
+    padding: 40px 15px;
+  }
+}

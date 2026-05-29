@@ -1,0 +1,62 @@
+<main class="home-container">
+  
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Explora las Estadísticas de <span>Runaterra</span></h1>
+      <p class="hero-subtitle">Busca invocadores, analiza campeones en tiempo real y domina la Grieta utilizando nuestra API de LoL.</p>
+      
+      <div class="search-box">
+        <div class="region-select">
+          <select>
+            <option value="lan">LAN</option>
+            <option value="las">LAS</option>
+            <option value="na">NA</option>
+            <option value="euw">EUW</option>
+          </select>
+        </div>
+        <input type="text" placeholder="Nombre de Invocador... (ej. Faker#KR1)" class="search-input">
+        <button class="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="features-section">
+    <h2 class="section-title">Herramientas de la API</h2>
+    <div class="cards-grid">
+      
+      <div class="feature-card">
+        <div class="card-icon">🏆</div>
+        <h3>Historial de Partidas</h3>
+        <p>Analiza el KDA, daño infligido, objetos comprados y el orden de habilidades de tus últimas partidas.</p>
+        <a href="#" class="card-link">Ver más →</a>
+      </div>
+
+      <div class="feature-card highlighted">
+        <div class="card-icon">⚔️</div>
+        <h3>Tier List de Campeones</h3>
+        <p>Descubre qué campeones tienen el mayor porcentaje de victoria (Win Rate) en el meta actual.</p>
+        <a href="#" class="card-link">Ver más →</a>
+      </div>
+
+      <div class="feature-card">
+        <div class="card-icon">🔮</div>
+        <h3>Rotación Semanal</h3>
+        <p>Entérate antes que nadie de los campeones gratuitos de la semana y sus estadísticas base.</p>
+        <a href="#" class="card-link">Ver más →</a>
+      </div>
+        
+    @for(character of characters; track character.id){
+      <div class="feature-card">
+          <div class="card-icon"><img src="{{character.thumbnailUrl}}"></div>
+          <h3>{{character.name}}</h3>
+          <p>{{character.title}}</p>
+      </div>
+    }
+
+    </div>
+  </section>
+
+</main>
