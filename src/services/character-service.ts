@@ -22,5 +22,9 @@ export class CharacterService {
   public getCharacters(): Observable<Character[]> {
     return this._http.get<Character[]>(this._baseUrl + "/characters");
   }
+
+  public getTanks(): Observable<Character[]>{
+    return this._http.get<Character[]>(this._baseUrl + "/characters/filter/tanks");
+  }
   
 }
